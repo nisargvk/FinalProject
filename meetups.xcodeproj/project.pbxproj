@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04240B1325584AE100EF9386 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B1225584AE100EF9386 /* ImagePicker.swift */; };
+		04240B29255A797100EF9386 /* PasswordRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B28255A797100EF9386 /* PasswordRecoveryView.swift */; };
+		04240B2C255A9B6F00EF9386 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B2B255A9B6E00EF9386 /* Network.swift */; };
+		04240B30255A9F9700EF9386 /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B2F255A9F9700EF9386 /* PasswordChangeView.swift */; };
+		04240B54255AE8BC00EF9386 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B53255AE8BC00EF9386 /* Google.swift */; };
+		04240BA0255B0F6A00EF9386 /* ColorShades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04240B9F255B0F6A00EF9386 /* ColorShades.swift */; };
+		0469EA662549788C00ECCD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EA652549788C00ECCD24 /* AppDelegate.swift */; };
+		0469EA682549788C00ECCD24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EA672549788C00ECCD24 /* SceneDelegate.swift */; };
+		0469EA6A2549788C00ECCD24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EA692549788C00ECCD24 /* ContentView.swift */; };
+		0469EA6C2549788E00ECCD24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0469EA6B2549788E00ECCD24 /* Assets.xcassets */; };
+		0469EA6F2549788E00ECCD24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0469EA6E2549788E00ECCD24 /* Preview Assets.xcassets */; };
+		0469EA722549788E00ECCD24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0469EA702549788E00ECCD24 /* LaunchScreen.storyboard */; };
+		0469EA9225497A0500ECCD24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0469EA9125497A0500ECCD24 /* GoogleService-Info.plist */; };
+		0469EA9B25497C9400ECCD24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EA9A25497C9400ECCD24 /* User.swift */; };
+		0469EA9E25497DBC00ECCD24 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EA9D25497DBC00ECCD24 /* AuthViewModel.swift */; };
+		0469EAA625497F3400ECCD24 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAA525497F3400ECCD24 /* SignInView.swift */; };
+		0469EAAA25497F4400ECCD24 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAA925497F4400ECCD24 /* SignUpView.swift */; };
+		0469EAAD25497F6200ECCD24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAAC25497F6200ECCD24 /* MainView.swift */; };
+		0469EAB32549823900ECCD24 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAB22549823900ECCD24 /* ProfileView.swift */; };
+		0469EAB62549859B00ECCD24 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAB52549859B00ECCD24 /* UserViewModel.swift */; };
+		0469EAC025499DA900ECCD24 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EABF25499DA900ECCD24 /* Validators.swift */; };
+		AEEA786D2E55A5FD35ED9C93 /* Pods_meetups.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1896A28294D884A59A196 /* Pods_meetups.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04240B1225584AE100EF9386 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		04240B28255A797100EF9386 /* PasswordRecoveryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryView.swift; sourceTree = "<group>"; };
+		04240B2B255A9B6E00EF9386 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		04240B2F255A9F9700EF9386 /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
+		04240B53255AE8BC00EF9386 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
+		04240B9F255B0F6A00EF9386 /* ColorShades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorShades.swift; sourceTree = "<group>"; };
+		0469EA622549788C00ECCD24 /* meetups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meetups.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0469EA652549788C00ECCD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0469EA672549788C00ECCD24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0469EA692549788C00ECCD24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0469EA6B2549788E00ECCD24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0469EA6E2549788E00ECCD24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0469EA712549788E00ECCD24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0469EA732549788E00ECCD24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0469EA9125497A0500ECCD24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0469EA9A25497C9400ECCD24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0469EA9D25497DBC00ECCD24 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0469EAA525497F3400ECCD24 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0469EAA925497F4400ECCD24 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0469EAAC25497F6200ECCD24 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0469EAB22549823900ECCD24 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0469EAB52549859B00ECCD24 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		0469EABF25499DA900ECCD24 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		18F1896A28294D884A59A196 /* Pods_meetups.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meetups.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C75E7F8C38AE690EDF8CEC /* Pods-meetups.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meetups.debug.xcconfig"; path = "Target Support Files/Pods-meetups/Pods-meetups.debug.xcconfig"; sourceTree = "<group>"; };
+		7416F6841FBEAAAC091E5247 /* Pods-meetups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meetups.release.xcconfig"; path = "Target Support Files/Pods-meetups/Pods-meetups.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0469EA5F2549788C00ECCD24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEA786D2E55A5FD35ED9C93 /* Pods_meetups.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04240B1125584ACC00EF9386 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				04240B1225584AE100EF9386 /* ImagePicker.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		04240B2E255A9F7F00EF9386 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				0469EAB22549823900ECCD24 /* ProfileView.swift */,
+				04240B2F255A9F9700EF9386 /* PasswordChangeView.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		04240B99255B0F3100EF9386 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				04240B9F255B0F6A00EF9386 /* ColorShades.swift */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		0469EA592549788C00ECCD24 = {
+			isa = PBXGroup;
+			children = (
+				0469EA642549788C00ECCD24 /* meetups */,
+				0469EA632549788C00ECCD24 /* Products */,
+				E5AFBDAC59AA38EE80A71539 /* Pods */,
+				E1A78064FA87D7EECEE865F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0469EA632549788C00ECCD24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0469EA622549788C00ECCD24 /* meetups.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0469EA642549788C00ECCD24 /* meetups */ = {
+			isa = PBXGroup;
+			children = (
+				0469EA9525497AE500ECCD24 /* models */,
+				0469EA9625497AEB00ECCD24 /* viewmodels */,
+				0469EA9825497B0700ECCD24 /* views */,
+				0469EABE25499D8500ECCD24 /* utilities */,
+				04240B99255B0F3100EF9386 /* styles */,
+				0469EA652549788C00ECCD24 /* AppDelegate.swift */,
+				0469EA672549788C00ECCD24 /* SceneDelegate.swift */,
+				0469EA6B2549788E00ECCD24 /* Assets.xcassets */,
+				0469EA702549788E00ECCD24 /* LaunchScreen.storyboard */,
+				0469EA732549788E00ECCD24 /* Info.plist */,
+				0469EA9125497A0500ECCD24 /* GoogleService-Info.plist */,
+				0469EA6D2549788E00ECCD24 /* Preview Content */,
+			);
+			path = meetups;
+			sourceTree = "<group>";
+		};
+		0469EA6D2549788E00ECCD24 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0469EA6E2549788E00ECCD24 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0469EA9525497AE500ECCD24 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0469EA9A25497C9400ECCD24 /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0469EA9625497AEB00ECCD24 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				0469EA9D25497DBC00ECCD24 /* AuthViewModel.swift */,
+				0469EAB52549859B00ECCD24 /* UserViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		0469EA9825497B0700ECCD24 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				04240B1125584ACC00EF9386 /* common */,
+				0469EAA325497EFF00ECCD24 /* auth */,
+				0469EAA425497F0300ECCD24 /* main */,
+				0469EA692549788C00ECCD24 /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0469EAA325497EFF00ECCD24 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				04240B28255A797100EF9386 /* PasswordRecoveryView.swift */,
+				0469EAA525497F3400ECCD24 /* SignInView.swift */,
+				0469EAA925497F4400ECCD24 /* SignUpView.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		0469EAA425497F0300ECCD24 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				04240B2E255A9F7F00EF9386 /* profile */,
+				0469EAAC25497F6200ECCD24 /* MainView.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		0469EABE25499D8500ECCD24 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0469EABF25499DA900ECCD24 /* Validators.swift */,
+				04240B2B255A9B6E00EF9386 /* Network.swift */,
+				04240B53255AE8BC00EF9386 /* Google.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		E1A78064FA87D7EECEE865F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18F1896A28294D884A59A196 /* Pods_meetups.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5AFBDAC59AA38EE80A71539 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36C75E7F8C38AE690EDF8CEC /* Pods-meetups.debug.xcconfig */,
+				7416F6841FBEAAAC091E5247 /* Pods-meetups.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0469EA612549788C00ECCD24 /* meetups */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0469EA762549788E00ECCD24 /* Build configuration list for PBXNativeTarget "meetups" */;
+			buildPhases = (
+				FD283D9EB3ACFDCF219B5D71 /* [CP] Check Pods Manifest.lock */,
+				0469EA5E2549788C00ECCD24 /* Sources */,
+				0469EA5F2549788C00ECCD24 /* Frameworks */,
+				0469EA602549788C00ECCD24 /* Resources */,
+				930E667BC54AFBA5719266CB /* [CP] Embed Pods Frameworks */,
+				8F44A8A14DEC3744CBC223CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = meetups;
+			productName = meetups;
+			productReference = 0469EA622549788C00ECCD24 /* meetups.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0469EA5A2549788C00ECCD24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					0469EA612549788C00ECCD24 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 0469EA5D2549788C00ECCD24 /* Build configuration list for PBXProject "meetups" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0469EA592549788C00ECCD24;
+			productRefGroup = 0469EA632549788C00ECCD24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0469EA612549788C00ECCD24 /* meetups */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0469EA602549788C00ECCD24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0469EA722549788E00ECCD24 /* LaunchScreen.storyboard in Resources */,
+				0469EA9225497A0500ECCD24 /* GoogleService-Info.plist in Resources */,
+				0469EA6F2549788E00ECCD24 /* Preview Assets.xcassets in Resources */,
+				0469EA6C2549788E00ECCD24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F44A8A14DEC3744CBC223CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930E667BC54AFBA5719266CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meetups/Pods-meetups-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD283D9EB3ACFDCF219B5D71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meetups-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0469EA5E2549788C00ECCD24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04240B54255AE8BC00EF9386 /* Google.swift in Sources */,
+				0469EAA625497F3400ECCD24 /* SignInView.swift in Sources */,
+				04240BA0255B0F6A00EF9386 /* ColorShades.swift in Sources */,
+				0469EAB32549823900ECCD24 /* ProfileView.swift in Sources */,
+				0469EA9B25497C9400ECCD24 /* User.swift in Sources */,
+				0469EAB62549859B00ECCD24 /* UserViewModel.swift in Sources */,
+				0469EA662549788C00ECCD24 /* AppDelegate.swift in Sources */,
+				04240B29255A797100EF9386 /* PasswordRecoveryView.swift in Sources */,
+				0469EAAA25497F4400ECCD24 /* SignUpView.swift in Sources */,
+				0469EA682549788C00ECCD24 /* SceneDelegate.swift in Sources */,
+				0469EAAD25497F6200ECCD24 /* MainView.swift in Sources */,
+				0469EA9E25497DBC00ECCD24 /* AuthViewModel.swift in Sources */,
+				04240B1325584AE100EF9386 /* ImagePicker.swift in Sources */,
+				04240B30255A9F9700EF9386 /* PasswordChangeView.swift in Sources */,
+				0469EAC025499DA900ECCD24 /* Validators.swift in Sources */,
+				04240B2C255A9B6F00EF9386 /* Network.swift in Sources */,
+				0469EA6A2549788C00ECCD24 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0469EA702549788E00ECCD24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0469EA712549788E00ECCD24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0469EA742549788E00ECCD24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0469EA752549788E00ECCD24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0469EA772549788E00ECCD24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C75E7F8C38AE690EDF8CEC /* Pods-meetups.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meetups/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7FB8Z83FZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = meetups/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hryhorii.pievniev.meetups;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0469EA782549788E00ECCD24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7416F6841FBEAAAC091E5247 /* Pods-meetups.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"meetups/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7FB8Z83FZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = meetups/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hryhorii.pievniev.meetups;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0469EA5D2549788C00ECCD24 /* Build configuration list for PBXProject "meetups" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0469EA742549788E00ECCD24 /* Debug */,
+				0469EA752549788E00ECCD24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0469EA762549788E00ECCD24 /* Build configuration list for PBXNativeTarget "meetups" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0469EA772549788E00ECCD24 /* Debug */,
+				0469EA782549788E00ECCD24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0469EA5A2549788C00ECCD24 /* Project object */;
+}
