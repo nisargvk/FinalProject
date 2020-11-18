@@ -9,18 +9,32 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject() var userViewModel: UserViewModel
+    @EnvironmentObject() var authViewModel: AuthViewModel
+
     @State private var selection: Int? = nil
     @State private var meetingDate = Date()
     var body: some View {
+        NavigationLink(destination: ProfileView(), tag:1, selection: $selection){
+           // Text(userViewModel.userProfile.username).foregroundColor(.blue)
+        }
+        NavigationLink(destination: MeetingInfoView(), tag:3, selection: $selection){}
+        NavigationLink(destination: SignInView(), tag:2, selection: $selection){}
         NavigationView {
-            NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
+           
+          //  NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
             VStack {
                 if userViewModel.profileIsLoaded {
+                  
+                    
                     Button(action:{
                         print("Add a meeting")
-                        self.selection = 2
+                        self.selection = 3
                     }){
                         Image(systemName:"plus")
+                            .resizable()
+                            .frame(width: 40, height:40)
+                            .shadow(radius: 1,x: 1,y:1)
+                            .offset(y:350)
                             
                     }
                 } else {
@@ -41,13 +55,13 @@ struct MainView: View {
                     }label:{
                         Image(systemName: "gear")
                     }
-                    
+
                 }
             }
 //            .navigationBarItems(trailing:
 //                NavigationLink(destination: ProfileView()) {
 //                    Text(userViewModel.userProfile.username)
-//                        .foregroundColor(.blue)
+//                        foregroundColor(.blue)
 //                }
 //            )
         }.navigationViewStyle(StackNavigationViewStyle())
@@ -58,12 +72,14 @@ struct MainView: View {
         }
     }
     private func editProfile(){
+        //print(#function)
+        //self.userViewModel.userProfile
         self.selection = 1
        
     }
     
     private func signOut(){
-        self.selection = 1
+        self.authViewModel.signOut()
         
     }
 }

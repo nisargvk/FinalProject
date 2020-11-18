@@ -28,6 +28,7 @@
 		0469EAB32549823900ECCD24 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAB22549823900ECCD24 /* ProfileView.swift */; };
 		0469EAB62549859B00ECCD24 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EAB52549859B00ECCD24 /* UserViewModel.swift */; };
 		0469EAC025499DA900ECCD24 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469EABF25499DA900ECCD24 /* Validators.swift */; };
+		522BEAE32563D71A00B8B2DC /* MeetingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BEAE22563D71A00B8B2DC /* MeetingInfoView.swift */; };
 		AEEA786D2E55A5FD35ED9C93 /* Pods_meetups.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1896A28294D884A59A196 /* Pods_meetups.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		0469EABF25499DA900ECCD24 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		18F1896A28294D884A59A196 /* Pods_meetups.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meetups.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C75E7F8C38AE690EDF8CEC /* Pods-meetups.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meetups.debug.xcconfig"; path = "Target Support Files/Pods-meetups/Pods-meetups.debug.xcconfig"; sourceTree = "<group>"; };
+		522BEAE22563D71A00B8B2DC /* MeetingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingInfoView.swift; sourceTree = "<group>"; };
 		7416F6841FBEAAAC091E5247 /* Pods-meetups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meetups.release.xcconfig"; path = "Target Support Files/Pods-meetups/Pods-meetups.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 			children = (
 				04240B2E255A9F7F00EF9386 /* profile */,
 				0469EAAC25497F6200ECCD24 /* MainView.swift */,
+				522BEAE22563D71A00B8B2DC /* MeetingInfoView.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				0469EAB32549823900ECCD24 /* ProfileView.swift in Sources */,
 				0469EA9B25497C9400ECCD24 /* User.swift in Sources */,
 				0469EAB62549859B00ECCD24 /* UserViewModel.swift in Sources */,
+				522BEAE32563D71A00B8B2DC /* MeetingInfoView.swift in Sources */,
 				0469EA662549788C00ECCD24 /* AppDelegate.swift in Sources */,
 				04240B29255A797100EF9386 /* PasswordRecoveryView.swift in Sources */,
 				0469EAAA25497F4400ECCD24 /* SignUpView.swift in Sources */,
