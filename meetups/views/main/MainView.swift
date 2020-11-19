@@ -14,28 +14,30 @@ struct MainView: View {
     @State private var selection: Int? = nil
     @State private var meetingDate = Date()
     var body: some View {
-        NavigationLink(destination: ProfileView(), tag:1, selection: $selection){
-           // Text(userViewModel.userProfile.username).foregroundColor(.blue)
-        }
-        NavigationLink(destination: MeetingInfoView(), tag:3, selection: $selection){}
-        NavigationLink(destination: SignInView(), tag:2, selection: $selection){}
+        
         NavigationView {
            
           //  NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
             VStack {
+                NavigationLink(destination: ProfileView(), tag:1, selection: $selection){
+                   // Text(userViewModel.userProfile.username).foregroundColor(.blue)
+                }
+                NavigationLink(destination: MeetingInfoView(), tag:3, selection: $selection){}
+                NavigationLink(destination: SignInView(), tag:2, selection: $selection){}
                 if userViewModel.profileIsLoaded {
                   
                     
                     Button(action:{
-                        print("Add a meeting")
-                        self.selection = 3
+                       // print("Add a meeting")
+                        self.meetingView()
+                        
                     }){
                         Image(systemName:"plus")
                             .resizable()
                             .frame(width: 40, height:40)
                             .shadow(radius: 1,x: 1,y:1)
                             .offset(y:350)
-                            
+                       
                     }
                 } else {
                     VStack {
@@ -76,6 +78,10 @@ struct MainView: View {
         //self.userViewModel.userProfile
         self.selection = 1
        
+    }
+    
+    private func meetingView(){
+        self.selection = 3
     }
     
     private func signOut(){
