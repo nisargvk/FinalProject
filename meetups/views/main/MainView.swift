@@ -10,6 +10,10 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject() var userViewModel: UserViewModel
     @EnvironmentObject() var authViewModel: AuthViewModel
+    @EnvironmentObject() var meetingViewModel: MeetingViewModel
+    @Environment(\.presentationMode) var presentationMode
+
+
 
     @State private var selection: Int? = nil
     @State private var meetingDate = Date()
@@ -22,27 +26,55 @@ struct MainView: View {
         NavigationView {
            
           //  NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
-            VStack {
-                if userViewModel.profileIsLoaded {
-                  
+           // VStack {
+               
+                    ZStack{
+                        if userViewModel.profileIsLoaded {
+                        
+                        List{
+                            ForEach(self.meetingViewModel.meetingList, id: \.self){ (parking) in
+                                
+                                    
+                                    HStack{
+
+                                        Text("@ \(parking.meetingLocation)")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                
+                                
+                            }
+                            .onDelete{(indexSet) in
+                                for index in indexSet{
+                                    self.meetingViewModel.deleteMeeting(index: index)
+                                }
+                                
+                            }
                     
-                    Button(action:{
-                        print("Add a meeting")
-                        self.selection = 3
-                    }){
-                        Image(systemName:"plus")
-                            .resizable()
-                            .frame(width: 40, height:40)
-                            .shadow(radius: 1,x: 1,y:1)
-                            .offset(y:350)
                             
-                    }
-                } else {
+                        }
+                }else {
                     VStack {
                         ProgressView()
                         Text("Entering...")
                     }
                 }
+                        
+                        Button(action:{
+                            print("Add a meeting")
+                            self.selection = 3
+                        }){
+                            Image(systemName:"plus")
+                                .resizable()
+                                .frame(width: 40, height:40)
+                                .shadow(radius: 1,x: 1,y:1)
+                               // .offset(y:350)
+                                
+                        }
+                    }
+                
+        
+                
             }.navigationBarTitle("My meetups", displayMode: .inline)
             .navigationBarBackButtonHidden(false)
             
@@ -58,19 +90,19 @@ struct MainView: View {
 
                 }
             }
-//            .navigationBarItems(trailing:
-//                NavigationLink(destination: ProfileView()) {
-//                    Text(userViewModel.userProfile.username)
-//                        foregroundColor(.blue)
-//                }
-//            )
-        }.navigationViewStyle(StackNavigationViewStyle())
+
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             userViewModel.listenToUser()
         }.onDisappear {
             userViewModel.stopListeningToUser()
         }
+        .onAppear(){
+            //self.meetingViewModel.meetingList.removeAll()
+            self.meetingViewModel.getAllMeetings()
+        }
     }
+    
     private func editProfile(){
         //print(#function)
         //self.userViewModel.userProfile

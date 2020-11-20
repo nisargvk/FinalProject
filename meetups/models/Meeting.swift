@@ -19,6 +19,7 @@ struct Meeting: Codable, Hashable {
     
     init(email: String, purpose: String, meetingDate: Date, meetingLocation: String){
         self.email = email
+        self.purpose = purpose
         self.meetingDate = meetingDate
         self.meetingLocation = meetingLocation
     }
