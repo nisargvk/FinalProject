@@ -54,7 +54,7 @@ struct MeetingInfoView: View {
                 }
             }
             Button(action:{
-                //self.addParking()
+                self.addMeeting()
             }){
                 Text("Add Parking")
                     .font(.headline)

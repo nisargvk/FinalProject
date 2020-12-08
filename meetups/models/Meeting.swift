@@ -14,6 +14,8 @@ struct Meeting: Codable, Hashable {
     var purpose: String = ""
     var meetingDate = Date()
     var meetingLocation: String = ""
+    var meetingLat: Double = 0.0
+    var meetingLng: Double = 0.0
     
     init(){}
     

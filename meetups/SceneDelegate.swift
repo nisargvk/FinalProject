@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    var parkingViewModel = MeetingViewModel()
+    var meetingViewModel = MeetingViewModel()
     var userSettings = UserSettings()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -39,7 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(googleDelegate)
             .environmentObject(authViewModel)
             .environmentObject(userViewModel)
-            //.environmentObject(meetingViewModel)
+            .environmentObject(meetingViewModel)
+            .environmentObject(userSettings)
+
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

@@ -93,6 +93,7 @@ struct MainView: View {
         }.navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             userViewModel.listenToUser()
+            //meetingViewModel.meetingList()
             self.meetingViewModel.meetingList.removeAll()
             self.meetingViewModel.getAllMeetings()
 
