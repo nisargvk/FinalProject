@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct MeetingInfoView: View {
+    @ObservedObject var locationManager = LocationManager()
+    @Environment(\.presentationMode) var presentationMode
+    
+    @EnvironmentObject var meetingViewModel: MeetingViewModel
+    @EnvironmentObject var userSettings: UserSettings
     
     @State private var purpose: String = ""
     @State private var meetingDate = Date()
     @State private var meetingLocation: String = ""
     @State private var duration = 0
     var durationType = ["Private","Public"]
+    
+    @State private var meetingLat: Double = 0.0
+    @State private var meetingLng: Double = 0.0
+   
 
     var body: some View {
         VStack{
@@ -31,8 +40,16 @@ struct MeetingInfoView: View {
                                 }
                         }
                     }
-                    Section{
-                        TextField("Meeting Location", text: $meetingLocation)
+                }
+                
+                Section{
+                    HStack{
+                        TextField("Meeting Location", text:$meetingLocation)
+                        Button(action: {
+                            self.getLocation()
+                        }){
+                            Image(systemName: "location")
+                        }
                     }
                 }
             }
@@ -50,6 +67,35 @@ struct MeetingInfoView: View {
             }
             
         }
+    }
+    
+    private func getLocation(){
+        print(#function, "Getting Location")
+        
+        self.locationManager.start()
+        
+        print(#function, "Address : \(self.locationManager.address)")
+        print(#function, "Lat : \(self.locationManager.lat)")
+        print(#function, "Lng : \(self.locationManager.lng)")
+        
+        self.meetingLocation = self.locationManager.address
+        self.meetingLat = self.locationManager.lat
+        self.meetingLng = self.locationManager.lng
+    }
+    
+    private func addMeeting(){
+        var newMeeting = Meeting()
+        newMeeting.email = self.userSettings.userEmail
+        newMeeting.purpose = self.purpose
+        newMeeting.meetingDate = self.meetingDate
+        newMeeting.meetingLocation = self.meetingLocation
+        
+        print(#function, "New Meeting : \(newMeeting)")
+        
+        meetingViewModel.addMeeting(newMeeting: newMeeting)
+        
+        
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

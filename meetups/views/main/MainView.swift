@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject() var userViewModel: UserViewModel
     @EnvironmentObject() var authViewModel: AuthViewModel
+    @EnvironmentObject var meetingViewModel: MeetingViewModel
 
     @State private var selection: Int? = nil
     @State private var meetingDate = Date()
@@ -19,11 +20,32 @@ struct MainView: View {
            
           //  NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
             VStack {
-                NavigationLink(destination: ProfileView(), tag:1, selection: $selection){
-                   // Text(userViewModel.userProfile.username).foregroundColor(.blue)
-                }
+                NavigationLink(destination: ProfileView(), tag:1, selection: $selection){}
                 NavigationLink(destination: MeetingInfoView(), tag:3, selection: $selection){}
                 NavigationLink(destination: SignInView(), tag:2, selection: $selection){}
+                
+                List{
+                    ForEach(self.meetingViewModel.meetingList, id: \.self){ (meeting) in
+                        
+//                        NavigationLink(destination: ParkingDetailView(parking: parking)){
+//
+//                            HStack{
+//                                Text("\(Formatter().simplifiedDateDormatter(date: parking.parkingDate))")
+//                                Text("@ \(parking.buildingCode)")
+//                            }
+//                            .font(.headline)
+//                            .foregroundColor(.blue)
+//                        }
+                        
+                    }
+                    .onDelete{(indexSet) in
+                        for index in indexSet{
+                            self.meetingViewModel.deleteMeeting(index: index)
+                        }
+                        
+                    }
+                    
+                }
                 if userViewModel.profileIsLoaded {
                   
                     //Button("Add Meeting", action: self.meetingView)
@@ -71,6 +93,9 @@ struct MainView: View {
         }.navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             userViewModel.listenToUser()
+            self.meetingViewModel.meetingList.removeAll()
+            self.meetingViewModel.getAllMeetings()
+
         }.onDisappear {
             userViewModel.stopListeningToUser()
         }
