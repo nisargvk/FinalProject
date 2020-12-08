@@ -12,8 +12,8 @@ struct MeetingInfoView: View {
     @State private var purpose: String = ""
     @State private var meetingDate = Date()
     @State private var meetingLocation: String = ""
-    @State private var duration: String = ""
-    let durationHours = ["Private","Public"]
+    @State private var duration = 0
+    var durationType = ["Private","Public"]
 
     var body: some View {
         VStack{
@@ -24,14 +24,29 @@ struct MeetingInfoView: View {
                         Text("Meeting Date")
                     }
                     
-                    Section(header: Text("Meeting Type")){
-                        Picker(selection: $duration,label: Text("Duration"), content: /*@START_MENU_TOKEN@*/{
-                        })
+                    Section(){
+                        Picker(selection: $duration,label: Text("Meeting Type")){
+                                ForEach(0 ..< durationType.count) {
+                                               Text(self.durationType[$0])
+                                }
                         }
+                    }
                     Section{
                         TextField("Meeting Location", text: $meetingLocation)
                     }
                 }
+            }
+            Button(action:{
+                //self.addParking()
+            }){
+                Text("Add Parking")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 60)
+                    .background(
+                        Color(UIColor(Color.orange)
+                    ))
+                    .cornerRadius(5.0)
             }
             
         }

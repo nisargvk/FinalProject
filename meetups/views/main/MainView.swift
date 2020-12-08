@@ -26,18 +26,20 @@ struct MainView: View {
                 NavigationLink(destination: SignInView(), tag:2, selection: $selection){}
                 if userViewModel.profileIsLoaded {
                   
-                    
+                    //Button("Add Meeting", action: self.meetingView)
+
                     Button(action:{
                        // print("Add a meeting")
                         self.meetingView()
-                        
+
                     }){
                         Image(systemName:"plus")
-                            .resizable()
-                            .frame(width: 40, height:40)
-                            .shadow(radius: 1,x: 1,y:1)
-                            .offset(y:350)
-                       
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 60)
+                            .background(
+                                Color(UIColor(Color.orange)
+                            ))
                     }
                 } else {
                     VStack {
