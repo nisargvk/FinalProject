@@ -12,6 +12,7 @@ import GoogleSignIn
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var meetingViewModel = MeetingViewModel()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -37,6 +38,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(googleDelegate)
             .environmentObject(authViewModel)
             .environmentObject(userViewModel)
+            .environmentObject(meetingViewModel)
+
+        
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
