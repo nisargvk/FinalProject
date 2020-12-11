@@ -10,7 +10,7 @@ import GoogleSignIn
 
 struct SignInView: View {
     @EnvironmentObject() var authViewModel: AuthViewModel
-    
+    @EnvironmentObject var userSettings: UserSettings
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var errorMessage: String = ""
@@ -54,12 +54,14 @@ struct SignInView: View {
                 }
             }
         }
+        self.userSettings.userEmail = self.email
     }
     
     private func onSignInWithGoogle() {
         self.errorMessage = ""
 
         self.authViewModel.signInWithGoogle()
+        self.userSettings.userEmail = self.email
     }
     
     var body: some View {

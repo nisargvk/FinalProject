@@ -12,8 +12,11 @@ import os
 
 class MeetingViewModel: ObservableObject{
     @Published var meetingList = [Meeting]()
-    
-    private var db = Firestore.firestore()
+   // @EnvironmentObject() var userViewModel: UserViewModel
+    @EnvironmentObject var userSettings: UserSettings
+    //private var db = Firestore.firestore()
+    private let db: Firestore
+    private let auth: Auth
     private let COLLECTION_NAME = "Meetings"
     
     func addMeeting(newMeeting: Meeting){
@@ -24,11 +27,16 @@ class MeetingViewModel: ObservableObject{
         }
     }
     
-    func getAllMeetings(){
-        let email = UserDefaults.standard.string(forKey: "KEY_EMAIL")
+    init(firestore: Firestore, auth: Auth) {
+        self.db = firestore
         
+        self.auth = auth
+    }
+    func getAllMeetings(){
+       // let userEmail = userSettings.userEmail
+        let userEmail = self.auth.currentUser?.email
         db.collection(COLLECTION_NAME)
-        .whereField("email", isEqualTo: email as Any)
+        .whereField("email", isEqualTo: userEmail as Any)
             .order(by: "meetingDate", descending: true)
             .addSnapshotListener({ (querySnapshot, error) in
                 

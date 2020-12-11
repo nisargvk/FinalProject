@@ -27,15 +27,15 @@ struct MainView: View {
                 List{
                     ForEach(self.meetingViewModel.meetingList, id: \.self){ (meeting) in
                         
-//                        NavigationLink(destination: ParkingDetailView(parking: parking)){
-//
-//                            HStack{
+                        NavigationLink(destination: MeetingDetailView(meeting: meeting)){
+
+                           HStack{
 //                                Text("\(Formatter().simplifiedDateDormatter(date: parking.parkingDate))")
-//                                Text("@ \(parking.buildingCode)")
-//                            }
-//                            .font(.headline)
-//                            .foregroundColor(.blue)
-//                        }
+                               Text("@ \(meeting.meetingLocation)")
+                            }
+                          .font(.headline)
+                           .foregroundColor(.blue)
+                       }
                         
                     }
                     .onDelete{(indexSet) in
@@ -84,12 +84,6 @@ struct MainView: View {
 
                 }
             }
-//            .navigationBarItems(trailing:
-//                NavigationLink(destination: ProfileView()) {
-//                    Text(userViewModel.userProfile.username)
-//                        foregroundColor(.blue)
-//                }
-//            )
         }.navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             userViewModel.listenToUser()

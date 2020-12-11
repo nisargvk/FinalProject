@@ -13,7 +13,7 @@ struct MeetingInfoView: View {
     
     @EnvironmentObject var meetingViewModel: MeetingViewModel
     @EnvironmentObject var userSettings: UserSettings
-    
+    @EnvironmentObject() var userViewModel: UserViewModel
     @State private var purpose: String = ""
     @State private var meetingDate = Date()
     @State private var meetingLocation: String = ""

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject() var authViewModel: AuthViewModel
+    @EnvironmentObject var userSettings: UserSettings
+    @EnvironmentObject var meetingViewModel: MeetingViewModel
     
     var body: some View {
         Group {
@@ -30,6 +32,7 @@ struct ContentView: View {
         }
         .onAppear {
             authViewModel.listenToAuth()
+            
         }
     }
 }
@@ -66,5 +69,8 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(
                 loggedIn(vm: userViewModel)
             )
+//            .environmentObject(
+//                loggedIn(vm:)
+//            )
     }
 }

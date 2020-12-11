@@ -3,10 +3,6 @@
 //  meetups
 //
 //  Created by Nisarg on 2020-12-07.
-//
-
-//
-
 
 import SwiftUI
 import MapKit
@@ -98,7 +94,7 @@ struct MapView : UIViewRepresentable{
         locationManager.addPinToMapView(mapView: uiView, coordinates: sourceCoordinates, title: self.locationManager.address)
         
         let destinationCoordinates = self.meetingCoordinates
-        self.locationManager.addPinToMapView(mapView: uiView, coordinates: destinationCoordinates, title: "You parked here")
+        self.locationManager.addPinToMapView(mapView: uiView, coordinates: destinationCoordinates, title: "Your meeting here")
         
         uiView.setRegion(region, animated: true)
         

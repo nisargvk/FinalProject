@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    var meetingViewModel = MeetingViewModel()
+   // var meetingViewModel = MeetingViewModel()
     var userSettings = UserSettings()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -33,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             auth: appDelegate.auth,
             storage: appDelegate.storage
         )
+        let meetingViewModel = MeetingViewModel(firestore: appDelegate.firestore, auth: appDelegate.auth)
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
@@ -41,6 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(userViewModel)
             .environmentObject(meetingViewModel)
             .environmentObject(userSettings)
+            
 
 
         if let windowScene = scene as? UIWindowScene {
