@@ -13,7 +13,7 @@ import os
 class MeetingViewModel: ObservableObject{
     @Published var meetingList = [Meeting]()
    // @EnvironmentObject() var userViewModel: UserViewModel
-    @EnvironmentObject var userSettings: UserSettings
+
     //private var db = Firestore.firestore()
     private let db: Firestore
     private let auth: Auth

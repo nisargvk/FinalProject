@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  meetups
 //
-//  Created by Mac on 28.10.2020.
+//  Created by  Nisarg Khandhar on 28.10.2020.
 //
 
 import SwiftUI

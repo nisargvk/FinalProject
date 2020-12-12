@@ -2,7 +2,7 @@
 //  Network.swift
 //  meetups
 //
-//  Created by Mac on 10.11.2020.
+//  Created by Hryhorii Pievniev on 10.11.2020.
 //
 
 import Foundation

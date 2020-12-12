@@ -26,7 +26,7 @@ class LocationManager: NSObject, ObservableObject{
         manager.requestWhenInUseAuthorization()
         manager.requestAlwaysAuthorization()
         
-        self.start()
+       // self.start()
     }
     
     func start(){
@@ -77,6 +77,7 @@ extension LocationManager: CLLocationManagerDelegate{
         self.getPlacemark()
     }
     
+    
     func getPlacemark(){
         //reverse geocoding
         let geoCoder = CLGeocoder()
@@ -100,38 +101,38 @@ extension LocationManager: CLLocationManagerDelegate{
     }
     
     
-    func getCoordinates(address: String, completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void){
-        
-        let geocoder = CLGeocoder()
-        
-        geocoder.geocodeAddressString(address){(placemarks, error) in
-            if error == nil {
-                if let placemark = placemarks?.first{
-                    let location = placemark.location!
-                    
-                    print(#function, "location: ", location)
-                    
-                    completionHandler(location.coordinate, nil)
-                    return
-                }
-            }
-            
-            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
-        }
-    }
+//    func getCoordinates(address: String, completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void){
+//
+//        let geocoder = CLGeocoder()
+//
+//        geocoder.geocodeAddressString(address){(placemarks, error) in
+//            if error == nil {
+//                if let placemark = placemarks?.first{
+//                    let location = placemark.location!
+//
+//                    print(#function, "location: ", location)
+//
+//                    completionHandler(location.coordinate, nil)
+//                    return
+//                }
+//            }
+//
+//            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+//        }
+//    }
     
-    func addPinToMapView(mapView: MKMapView, coordinates: CLLocationCoordinate2D, title: String?){
-        
-        let mapAnnotation = MKPointAnnotation()
-        mapAnnotation.coordinate = coordinates
-        
-        if let title = title{
-            mapAnnotation.title = title
-        }else{
-            mapAnnotation.title = address
-        }
-        
-        mapView.addAnnotation(mapAnnotation)
-    }
+//    func addPinToMapView(mapView: MKMapView, coordinates: CLLocationCoordinate2D, title: String?){
+//
+//        let mapAnnotation = MKPointAnnotation()
+//        mapAnnotation.coordinate = coordinates
+//
+//        if let title = title{
+//            mapAnnotation.title = title
+//        }else{
+//            mapAnnotation.title = address
+//        }
+//
+//        mapView.addAnnotation(mapAnnotation)
+//    }
 }
 

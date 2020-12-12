@@ -2,7 +2,7 @@
 //  ImagePicker.swift
 //  meetups
 //
-//  Created by Mac on 08.11.2020.
+//  Created by Hryhorii Pievniev on 08.11.2020.
 //
 
 import Foundation
