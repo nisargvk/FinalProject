@@ -11,7 +11,7 @@ struct MainView: View {
     @EnvironmentObject() var userViewModel: UserViewModel
     @EnvironmentObject() var authViewModel: AuthViewModel
     @EnvironmentObject var meetingViewModel: MeetingViewModel
-
+    @Environment(\.presentationMode) var presentationMode
     @State private var selection: Int? = nil
     @State private var meetingDate = Date()
     var body: some View {
@@ -48,10 +48,8 @@ struct MainView: View {
                 }
                 if userViewModel.profileIsLoaded {
                   
-                    //Button("Add Meeting", action: self.meetingView)
 
                     Button(action:{
-                       // print("Add a meeting")
                         self.meetingView()
 
                     }){
@@ -100,6 +98,13 @@ struct MainView: View {
         //self.userViewModel.userProfile
         self.selection = 1
        
+    }
+    
+    
+    
+    private func deleteAccount(){
+        self.presentationMode.wrappedValue.dismiss()
+
     }
     
     private func meetingView(){

@@ -59,8 +59,8 @@ struct MapView : UIViewRepresentable{
         map.isScrollEnabled = true
         map.isUserInteractionEnabled = true
         
-//        let sourceCoordinates = CLLocationCoordinate2D(latitude: 43.642567, longitude: -79.387054)
-        let sourceCoordinates = CLLocationCoordinate2D(latitude: self.locationManager.lat, longitude: self.locationManager.lng)
+        let sourceCoordinates = CLLocationCoordinate2D(latitude: 43.642567, longitude: -79.387054)
+        //let sourceCoordinates = CLLocationCoordinate2D(latitude: self.locationManager.lat, longitude: self.locationManager.lng)
         let region = MKCoordinateRegion(center: sourceCoordinates, latitudinalMeters: regionRadius * 4.0, longitudinalMeters: regionRadius * 4.0)
         
         //locationManager.addPinToMapView(mapView: map, coordinates: sourceCoordinates, title: "You're Here")
@@ -71,37 +71,6 @@ struct MapView : UIViewRepresentable{
         return map
     }
     
-    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-
-//        let sourceCoordinates = CLLocationCoordinate2D(latitude: self.locationManager.lat, longitude: self.locationManager.lng)
-//        let region = MKCoordinateRegion(center: sourceCoordinates, latitudinalMeters: regionRadius * 4.0, longitudinalMeters: regionRadius * 4.0)
-//
-//
-//
-//        let destinationCoordinates = self.meetingCoordinates
-//
-//        uiView.setRegion(region, animated: true)
-//
-//        //create and display directions
-//
-//        let request = MKDirections.Request()
-//        request.source = MKMapItem(placemark: MKPlacemark(coordinate: sourceCoordinates))
-//        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationCoordinates))
-//
-//        let direction = MKDirections(request: request)
-//        direction.calculate{(direct, error) in
-//
-//            if error != nil{
-//                print(#function, "Error finding directions ", error?.localizedDescription)
-//            }
-//
-//            let polyline = direct?.routes.first?.polyline
-//
-//            if (polyline != nil){
-//                uiView.addOverlay(polyline!)
-//                uiView.setRegion(MKCoordinateRegion(polyline!.boundingMapRect), animated: true)
-//            }
-        
         func createRandomLocation(nwCoordinate: CLLocationCoordinate2D, seCoordinate: CLLocationCoordinate2D) -> [CLLocationCoordinate2D]
         {
            return (0 ... 30).enumerated().map { _ in
@@ -117,17 +86,15 @@ struct MapView : UIViewRepresentable{
         }
         
         func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-            let sourceCoordinates = CLLocationCoordinate2D(latitude: self.locationManager.lat, longitude: self.locationManager.lng)
+            let sourceCoordinates = CLLocationCoordinate2D(latitude: 43.642567, longitude: -79.387054)
             let region = MKCoordinateRegion(center: sourceCoordinates, latitudinalMeters: regionRadius * 4.0, longitudinalMeters: regionRadius * 4.0)
             
             uiView.setRegion(region, animated: true)
         }
+        
+        
+        
         }
-        
-        
-        //you should check is source and destination are same locations, don't display route
-        //check for nil values or unavailability of values
-    }
     
     
     

@@ -23,7 +23,7 @@ class MeetingViewModel: ObservableObject{
         do{
             _ = try db.collection(COLLECTION_NAME).addDocument(from: newMeeting)
         }catch let error as NSError{
-            print(#function, "Error Creating document")
+            print(#function, "Error Creating document: \(error.localizedDescription)")
         }
     }
     

@@ -14,6 +14,7 @@ struct Meeting: Codable, Hashable {
     var purpose: String = ""
     var meetingDate = Date()
     var meetingLocation: String = ""
+    //var durationType = ["Public","Private"]
     var meetingLat: Double = 0.0
     var meetingLng: Double = 0.0
     
@@ -23,6 +24,8 @@ struct Meeting: Codable, Hashable {
         self.email = email
         self.purpose = purpose
         self.meetingDate = meetingDate
+        //self.durationType = durationType
         self.meetingLocation = meetingLocation
+    
     }
 }

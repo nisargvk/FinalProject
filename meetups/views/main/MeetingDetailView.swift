@@ -18,15 +18,11 @@ struct MeetingDetailView: View {
                                                        lng: self.meeting.meetingLng),
                            tag: 1, selection: $selection){}
             
-//            Text("\(Formatter().simplifiedDateDormatter(date: meeting.meetingDate))")
-//                .fontWeight(.bold)
-//                .foregroundColor(Color.red)
-//                .multilineTextAlignment(.center)
-            
+
             Text("Meeting Purpose : \(meeting.purpose)")
             Text("Email: \(meeting.email)")
             Text("Meeting Date: \(meeting.meetingDate)")
-            //Text("Location: \(meeting.meetingLocation)")
+            //Text("Meeting Type: \(meeting.durationType)")
             
             VStack{
                 Text("Location: \(meeting.meetingLocation)")
@@ -45,7 +41,10 @@ struct MeetingDetailView: View {
         .padding(5)
         .navigationBarTitle(Text("Meeting Details"))
     }
+    
+    
 }
+
 
 struct MeetingDetailView_Previews: PreviewProvider {
     static var previews: some View {

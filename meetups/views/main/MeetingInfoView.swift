@@ -18,7 +18,7 @@ struct MeetingInfoView: View {
     @State private var meetingDate = Date()
     @State private var meetingLocation: String = ""
     @State private var duration = 0
-    var durationType = ["Private","Public"]
+    @State var durationType = ["Private","Public"]
     
     @State private var meetingLat: Double = 0.0
     @State private var meetingLng: Double = 0.0
@@ -69,6 +69,18 @@ struct MeetingInfoView: View {
         }
     }
     
+    private func validateForm() -> String? {
+        if purpose.isEmpty{
+            return "Provide your purpose"
+        }
+        
+        if durationType.isEmpty {
+            return "Please specify the meeting type"
+        }
+        
+        return nil
+    }
+    
     private func getLocation(){
         print(#function, "Getting Location")
         
@@ -85,9 +97,11 @@ struct MeetingInfoView: View {
     
     private func addMeeting(){
         var newMeeting = Meeting()
+        let error = validateForm()
         newMeeting.email = self.userSettings.userEmail
         newMeeting.purpose = self.purpose
         newMeeting.meetingDate = self.meetingDate
+       // newMeeting.durationType = self.durationType
         newMeeting.meetingLocation = self.meetingLocation
         
         print(#function, "New Meeting : \(newMeeting)")
